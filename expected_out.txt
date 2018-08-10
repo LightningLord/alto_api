@@ -1,0 +1,26 @@
+
+=== Test create, fetch, update ===
+{"name":"alex","url":"http://alex.com"}
+{"name":"alex","url":"http://alex.org"}
+HTTP status code: 404
+
+=== Test simple annotation ===
+my name is <a href="http://alex.com">alex</a>
+my name is todd
+
+=== Test annotation of multiple names ===
+<a href="http://alex.com">alex</a>, <a href="http://bo.com">bo</a>, and <a href="http://casey.com">casey</a> went to the park.
+<a href="http://alex.com">alex</a> alexander alexandria alexbocasey
+
+=== Test HTML correctness ===
+<div data-alex="alex"><a href="http://alex.com">alex</a></div>
+<a href="http://foo.com">alex is already linked</a> but <a href="http://alex.com">alex</a> is not
+<div><p>this is paragraph 1 about <a href="http://alex.com">alex</a>.<p><a href="http://alex.com">alex</a>'s paragraph number 2.<p>and some closing remarks about <a href="http://alex.com">alex</a></div>
+
+=== Test additional annotations ===
+<div data-alex="alex"><a href="http://alex.com">alex</a></div>
+<div><p>this is paragraph 1 about <a href="http://alex.com">alex</a>.<p><a href="http://alex.com">alex</a>'s paragraph number 2.<p>and some closing remarks about <a href="http://alex.com">alex</a></div>
+<div><ul><li><a href="http://alex.com">alex</a><li><a href="http://bo.com">bo</a><li>bob<li><a href="http://casey.com">casey</a></ul></div><div><p>this is paragraph 1 about <a href="http://alex.com">alex</a>.<p><a href="http://alex.com">alex</a>'s paragraph number 2.<p>and some closing remarks about <a href="http://alex.com">alex</a></div>
+
+=== Tricky case ===
+<div class='<div class="name">name</a>'><a href="https://name.com">name</a></div>
